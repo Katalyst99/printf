@@ -10,6 +10,7 @@ int (*spec_check(char fmat))(va_list);
 int print_c(va_list ap);
 int print_s(va_list ap);
 int print_i(va_list ap);
+int print_pct(va_list ap);
 /**
  * struct dtfnc - struct type dtfnc
  * @type : The type
