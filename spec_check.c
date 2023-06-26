@@ -13,6 +13,7 @@ int (*spec_check(char fmat))(va_list)
 	dtfnc_t arr[] = {
 		{'c', print_c},
 		{'s', print_s},
+		{'%', print_pct},
 		{'d', print_i},
 		{'i', print_i},
 		{'\0', NULL}
