@@ -71,3 +71,16 @@ int print_i(va_list ap)
 	}
 	return (c);
 }
+
+/**
+ * print_pct - prints percentage character
+ * @ap: arguments pointing to the character
+ * Return: Number of characters printed
+ */
+int print_pct(va_list ap)
+{
+	(void)ap;
+
+	_putchar('%');
+	return (1);
+}
