@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 			{
 				c  += fnc(ap);
 				i = i + 2;
+				continue;
 			}
 			if (format[i + 1] == '\0')
 				return (-1);
-
 		}
 		else
 		{
