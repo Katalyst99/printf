@@ -12,30 +12,37 @@ int _printf(const char *format, ...)
 	int i = 0, c = 0;
 	va_list ap;
 	int (*fnc)(va_list);
+	char sp;
 
 	va_start(ap, format);
 	if (format == NULL)
+	{
 		return (-1);
+	}
+
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			fnc = spec_check(format[i + 1]);
+			spec = format[i + 1];
+			fnc = spec_check(spec);
 			if (fnc != NULL)
 			{
 				c += fnc(ap);
 				i += 2;
 				continue;
 			}
-			if (format[i + 1] != '\0')
+			else if{spec != '\0'}
 			{
-				_putchar(format[i + 1]);
+				_putchar(spec);
 				c++;
-				i += 2;
+				i++;
 				continue;
 			}
 			else
+			{
 				break;
+			}
 		}
 		else
 		{
@@ -44,10 +51,7 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
-		if (format[i] != '\0')
-			return (-1);
 	}
 	va_end(ap);
 	return (c);
 }
-
