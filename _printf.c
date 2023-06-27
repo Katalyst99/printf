@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			else if (sp != '\0'}
 			{
-				_putchar(spec);
+				_putchar(sp);
 				c++;
 				i++;
 				continue;
