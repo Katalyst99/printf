@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			fnc = spec_check(spec);
+			fnc = spec_check(format[i + 1]);
 			if (fnc != NULL)
 			{
 				c += fnc(ap);
