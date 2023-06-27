@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+				c += fnc(ap);
 				i++;
 				continue;
 			}
